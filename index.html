@@ -125,12 +125,10 @@ const whatsappNumbers = [
       const id = generateUUID();
       const payload = {
         pixel_id:  PIXEL_ID,
-        event:     'ViewContent',
         timestamp: new Date().toISOString(),
-        _fbc:      cookies._fbc || null,
-        _fbp:      cookies._fbp || null,
+        fbc:      cookies._fbc || null,
+        fbp:      cookies._fbp || null,
         external_id:      id,
-        country:          'AR',
         client_user_agent: navigator.userAgent,
         
       };
