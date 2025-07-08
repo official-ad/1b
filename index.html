@@ -154,6 +154,9 @@ const whatsappNumbers = [
         console.warn('Error enviando evento:', e);
       }
 
+
+await sleep(10000);
+
       // 4) Redirección a WhatsApp
       const waNumber = whatsappNumbers[Math.floor(Math.random() * whatsappNumbers.length)];
       window.location.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(MSG)}`;
